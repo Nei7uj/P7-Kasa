@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './assets/components/Navbar'
-import "./App.css";
+import "./App.scss";
 import Banner from './assets/components/Banner'
 import ApartmentGrid from './assets/components/ApartmentGrid'
 import Main from './assets/components/Main'

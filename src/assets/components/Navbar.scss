@@ -1,0 +1,24 @@
+@use "/src/scss/variables.scss" as *;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    font-weight: 400;
+    gap: 2rem;
+
+    & > *:first-child {
+        margin-right: auto;
+    }
+
+    & a {
+        text-decoration: none;
+        color:$color-primary;
+        &.active,
+        &:hover  {
+            text-decoration: underline;
+        }
+    }
+}
+
+
