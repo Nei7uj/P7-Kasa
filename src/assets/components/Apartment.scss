@@ -1,4 +1,4 @@
-@use "/src/scss/variables.scss" as *;
+@use "../scss/variables.scss" as *;
 
 .apartment {
     background-image: linear-gradient(to top, $color-primary, $color-secondary);
