@@ -34,18 +34,28 @@ function ApartmentPage() {
                     </div>
                 </div>
             </div>
-                <div className="apartment__description">
-                    <p className="description__header">Description</p>
+            <div className="apartment__info__area">
+                <div className="apartment__info">
+                    <p className="description__header">
+                        <span>Description</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </p>
                     <p className="description__content">Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.</p>
                 </div>
-                <div className="apartment__equipements">
-                    <p>Equipements</p>
+                <div className="apartment__info">
+                <p className="description__header">
+                        <span>Equipement</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </p>
+                    <p className="description__content">
                     <span>Équipements de base</span>
                     <span>Micro-Ondes</span>
                     <span>Douche italienne</span>
                     <span>Frigo</span>
                     <span>WIFI</span>
+                    </p>
                 </div>
+            </div>
         </div>
 
     ) 
