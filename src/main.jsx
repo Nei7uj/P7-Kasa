@@ -15,7 +15,7 @@ createRoot(root).render(
       <Route path="/" element={<HomePage />} />
       <Route path="flat" element={<><Navbar /><ApartmentPage /><Footer /></>} />
       <Route path="about" element={<><Navbar /><About /><Footer /></>} />
-      <Route path="error" element={<h1>404</h1>} />
+      <Route path="*" element={<h1>404</h1>} />
     </Routes>
   </BrowserRouter>
 );
