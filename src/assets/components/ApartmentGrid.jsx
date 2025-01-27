@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import "./ApartmentGrid.scss";
-import Apartment from './ApartmentCard';
 import ApartmentCard from './ApartmentCard';
 
 function ApartmentGrid() {
