@@ -25,5 +25,21 @@
         position: relative;
         top: -0.3rem;
         z-index: -1;
+        animation: slide-in 0.5s;
+        &.hidden {
+            animation: slide-out 0.5s;
+        }
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slide-out {
+    to {
+        transform: translateY(-100%);
     }
 }
