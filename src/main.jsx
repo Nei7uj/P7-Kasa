@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import HomePage from './assets/pages/HomePage/HomePage';
-import Navbar from './assets/components/Navbar';
-import Footer from './assets/layout/Footer';
+import Navbar from './assets/layout/Navbar/Navbar';
+import Footer from './assets/layout/Footer/Footer';
 import ApartmentPage from "./assets/pages/ApartmentPage/ApartmentPage";
 import About from "./assets/pages/About/About";
 import { BrowserRouter, Routes, Route} from "react-router";

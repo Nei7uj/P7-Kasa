@@ -1,4 +1,4 @@
-@use "../scss/variables.scss" as *;
+@use "../../scss/variables.scss" as *;
 
 .banner {
     position: relative;
@@ -13,7 +13,7 @@
     place-items: center;
     color: $color-tertiary;
     margin-bottom: 2rem;
-    max-width: 100%;
+    max-width: 80vw;
     &::before {
         position: absolute;
         border-radius: 2rem;

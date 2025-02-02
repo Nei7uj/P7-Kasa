@@ -1,6 +1,6 @@
 import React from "react";
 import "./ApartmentPage.scss";
-import DescriptionPanel from '../../components/DescriptionPanel';
+import DescriptionPanel from '../../components/DescriptionPanel/DescriptionPanel';
 
 function ApartmentPage() {
     return(
