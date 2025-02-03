@@ -1,20 +1,24 @@
 import React from "react";
 import "./ApartmentPage.scss";
 import DescriptionPanel from '../../components/DescriptionPanel/DescriptionPanel';
+import { useParams } from "react-router-dom";
 
-function ApartmentPage() {
+function ApartmentPage({apartments}) {
+    const{id}=useParams();
+    console.log(id)
+    const selectedHouse = apartments.find((logement) => logement.id === id);
+    console.log(selectedHouse);
     return(
         <div className="apartment-page">  
             <div>
-                <img src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="" />
+                <img src={selectedHouse.cover} alt="" />
             </div>
             <div className="apartment__header">
                 <div className="apartment__title">
-                    <h1>Appartement cosy</h1>
-                        <h2>Ile de France - Paris 17e</h2>
+                    <h1>{selectedHouse.title}</h1>
+                        <h2>{selectedHouse.location}</h2>
                     <div className="apartment__tags">
-                        <span>Batignolle</span>
-                        <span>Montmartre</span>
+                        <span>{selectedHouse.tags}</span>
                     </div>
                 </div>
 
@@ -27,11 +31,7 @@ function ApartmentPage() {
                         <div className="apartment__owner__badge"></div>
                     </div>
                     <div className="apartment__owner__stars">
-                        <span className="on">★</span>
-                        <span className="on">★</span>
-                        <span className="on">★</span>
-                        <span className="off">★</span>
-                        <span className="off">★</span>
+                        <span>{selectedHouse.rating}</span>
                     </div>
                 </div>
             </div>

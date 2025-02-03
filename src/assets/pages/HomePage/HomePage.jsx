@@ -4,12 +4,12 @@ import Banner from '../../layout/Banner/Banner'
 import ApartmentGrid from '../../components/ApartmentGrid/ApartmentGrid'
 import Main from '../../layout/Main/Main'
 
-function HomePage() {
+function HomePage({apartments}) {
   return (
     <div>
       <Main>
         <Banner />
-        <ApartmentGrid />
+        <ApartmentGrid apartments={apartments} />
       </Main>
     </div>
   )
