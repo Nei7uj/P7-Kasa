@@ -28,7 +28,8 @@ function ApartmentPage({apartments}) {
                             <span>Nathalie</span> 
                             <span>Jean</span>
                         </h3>
-                        <div className="apartment__owner__badge"></div>
+                        <div className="apartment__owner__badge">
+                        </div>
                     </div>
                     <div className="apartment__owner__stars">
                         <span>{selectedHouse.rating}</span>
