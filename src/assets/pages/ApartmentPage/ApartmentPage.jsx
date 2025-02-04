@@ -8,6 +8,9 @@ function ApartmentPage({apartments}) {
     console.log(id)
     const selectedHouse = apartments.find((logement) => logement.id === id);
     console.log(selectedHouse);
+    const name = selectedHouse.host.name;
+    const [firstName, lastName] = name.split(" ");
+
     return(
         <div className="apartment-page">  
             <div>
@@ -18,27 +21,28 @@ function ApartmentPage({apartments}) {
                     <h1>{selectedHouse.title}</h1>
                         <h2>{selectedHouse.location}</h2>
                     <div className="apartment__tags">
-                        <span>{selectedHouse.tags}</span>
+                        {selectedHouse.tags.map((tag) => (<span>{tag}</span>))}
+                        
                     </div>
                 </div>
-
                 <div className="apartment__owner">
                     <div className="apartment__owner__details">
                         <h3>
-                            <span>Nathalie</span> 
-                            <span>Jean</span>
+                            <span>{firstName}</span> 
+                            <span>{lastName}</span>
                         </h3>
                         <div className="apartment__owner__badge">
+                            <img src={selectedHouse.host.picture} alt="" />
                         </div>
                     </div>
                     <div className="apartment__owner__stars">
-                        <span>{selectedHouse.rating}</span>
+                        {[1, 2, 3, 4, 5,].map ((num) => (<span className={selectedHouse.rating >= num ? "on" : ""} >★</span>))}
                     </div>
                 </div>
             </div>
             <div className="apartment__info__area">
-                <DescriptionPanel title="Description"/>
-                <DescriptionPanel title="Equipements"/>
+                <DescriptionPanel title="Description" content={selectedHouse.description}/>
+                <DescriptionPanel title="Equipements" content={selectedHouse.equipments.map((eq) => (<li>{eq}</li>))}/>
             </div>
         </div>
 

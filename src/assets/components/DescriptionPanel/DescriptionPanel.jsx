@@ -15,7 +15,9 @@ function DescriptionPanel(props) {
                         <i class="fa-solid fa-chevron-down" onClick={showContent}></i>
                     </p>
 
-                    {isContentVisible &&<p className="description__content">Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.</p>}
+                    {isContentVisible &&<p className="description__content">
+                        {props.content}
+                        </p>}
                 </div>
     )
 }
