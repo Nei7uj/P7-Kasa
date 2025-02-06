@@ -1,6 +1,7 @@
 import React from "react";
 import "./ApartmentPage.scss";
 import DescriptionPanel from '../../components/DescriptionPanel/DescriptionPanel';
+import Carrousel from '../../layout/Carrousel/Carrousel';
 import { useParams } from "react-router-dom";
 
 function ApartmentPage({apartments}) {
@@ -13,9 +14,7 @@ function ApartmentPage({apartments}) {
 
     return(
         <div className="apartment-page">  
-            <div>
-                <img src={selectedHouse.cover} alt="" />
-            </div>
+            <Carrousel pictures={selectedHouse.pictures} />
             <div className="apartment__header">
                 <div className="apartment__title">
                     <h1>{selectedHouse.title}</h1>
