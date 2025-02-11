@@ -6,9 +6,7 @@ import { useParams } from "react-router-dom";
 
 function ApartmentPage({apartments}) {
     const{id}=useParams();
-    console.log(id)
     const selectedHouse = apartments.find((logement) => logement.id === id);
-    console.log(selectedHouse);
     const name = selectedHouse.host.name;
     const [firstName, lastName] = name.split(" ");
 

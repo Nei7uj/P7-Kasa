@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     padding: 0 2rem;
-    font-weight: 400;
+    font-weight: 500;
     gap: 2rem;
+    padding-inline: 15rem;
     @media screen and (width <= 768px) {
         text-transform: uppercase;
     }
@@ -16,7 +17,7 @@
 
     & a {
         text-decoration: none;
-        color:$color-primary;
+        color:$footer-background-color;
         &.active,
         &:hover  {
             text-decoration: underline;
