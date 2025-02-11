@@ -30,6 +30,9 @@ export function Carrousel(props) {
             <button className="btn btn-next" onClick={moveToNext}>
                 <i className="fas fa-chevron-right"></i>
             </button>
+            <span className="slide-counter">
+            {currentPicture + 1} / {pictures.length}
+            </span>
             <button className="btn btn-previous" onClick={moveToPrevious}>
             <i className="fas fa-chevron-left"></i>
             </button>
