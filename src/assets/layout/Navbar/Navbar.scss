@@ -3,12 +3,13 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 0 2rem;
+    padding: 8px 2rem;
     font-weight: 500;
     gap: 2rem;
-    padding-inline: 15rem;
+    padding-inline: 20rem;
     @media screen and (width <= 768px) {
         text-transform: uppercase;
+        justify-content: center;
     }
 
     & > *:first-child {

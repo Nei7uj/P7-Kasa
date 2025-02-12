@@ -31,7 +31,6 @@
         top: -0.3rem;
         z-index: -1;
         animation: slide-in 0.5s;
-        // min-height: 130px;
         &.hidden {
             animation: slide-out 0.5s;
         }
@@ -46,6 +45,6 @@
 
 @keyframes slide-out {
     to {
-        transform: translateY(-100%);
+        transform: translateY(100%);
     }
 }

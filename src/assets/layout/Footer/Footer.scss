@@ -3,7 +3,13 @@
 .footer {
     background-color: $footer-background-color;
     color: $color-tertiary;
-    padding: 20px;
-    text-align: center;
-    min-height: 97px;
+    padding: 60px;
+    min-height: 100px;
 }
+.footer__logo {
+    text-align: center;
+}
+.footer__text {
+    text-align: center;
+}
+    
