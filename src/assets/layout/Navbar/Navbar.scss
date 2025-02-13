@@ -10,6 +10,7 @@
     @media screen and (width <= 768px) {
         text-transform: uppercase;
         justify-content: center;
+        gap: 3rem;
     }
 
     & > *:first-child {

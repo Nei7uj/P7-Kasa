@@ -4,3 +4,9 @@
     padding-inline: 20rem;
     margin-bottom: 3rem;
 }
+
+@media screen and (width <= 768px) {
+    .main{
+        padding-inline: 10rem;
+    }
+}
