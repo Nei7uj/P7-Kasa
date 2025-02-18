@@ -31,6 +31,9 @@
         width: 100%;
         bottom: 1rem;
         text-align: center;
+        @media screen and (width <= 768px) {
+            color: transparent;
+        }
     }
     .image__container {
         position: relative;

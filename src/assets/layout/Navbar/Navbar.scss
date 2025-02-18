@@ -7,10 +7,12 @@
     font-weight: 500;
     gap: 2rem;
     padding-inline: 20rem;
+    justify-content: center;
+    white-space: nowrap;
     @media screen and (width <= 768px) {
-        text-transform: uppercase;
-        justify-content: center;
+        padding-inline: 10px;
         gap: 3rem;
+        white-space: nowrap;
     }
 
     & > *:first-child {

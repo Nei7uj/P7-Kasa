@@ -18,6 +18,9 @@
 @media screen and (width <= 768px) {
     .grid {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
         background-color: $grid-background-light;
         padding: 0;
     }

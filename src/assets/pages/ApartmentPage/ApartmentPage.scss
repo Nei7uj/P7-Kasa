@@ -2,8 +2,14 @@
 
 .apartment-page {
     color: $color-primary;
-    padding-inline: 15rem;
-    margin-inline: 5rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+    justify-content: center;
+    margin: 15px;
+    padding: 16%;
+    padding-top: 0px;
+    padding-bottom: 0px;
     @media screen and (width <= 768px) {
         padding-inline: 0;
     }

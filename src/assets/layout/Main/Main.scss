@@ -3,6 +3,10 @@
 .main {
     padding-inline: 20rem;
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (width <= 768px) {

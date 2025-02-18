@@ -30,9 +30,9 @@
         position: relative;
         top: -0.3rem;
         z-index: -1;
-        animation: slide-in 0.5s;
+        animation: slide-in 0.2s;
         &.hidden {
-            animation: slide-out 0.5s;
+            animation: slide-out 0.2s;
         }
     }
 }
