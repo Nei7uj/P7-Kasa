@@ -1,16 +1,11 @@
 @use "../../scss/variables.scss" as *;
 
 .main {
-    padding-inline: 20rem;
-    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-@media screen and (width <= 768px) {
-    .main{
-        padding-inline: 10rem;
-    }
+    padding: 16%;
+    margin-top: -15%;
+    margin-bottom: -12%;
 }

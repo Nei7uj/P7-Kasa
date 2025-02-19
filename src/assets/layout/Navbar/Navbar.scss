@@ -3,16 +3,21 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 8px 2rem;
+    padding: 8px 8rem;
     font-weight: 500;
     gap: 2rem;
-    padding-inline: 20rem;
     justify-content: center;
     white-space: nowrap;
+    padding-left: 16%;
+    padding-right: 17%;
     @media screen and (width <= 768px) {
-        padding-inline: 10px;
         gap: 3rem;
-        white-space: nowrap;
+        img {
+            align-items: flex-start;
+            display: flex;
+            margin: 0;
+            width: 9rem;
+        }
     }
 
     & > *:first-child {
@@ -26,6 +31,14 @@
         &:hover  {
             text-decoration: underline;
         }
+    }
+}
+
+@media screen and (width <= 768px) {
+    .navbar a {
+        text-decoration: none;
+        color:$footer-background-color;
+        text-transform: uppercase;
     }
 }
 
