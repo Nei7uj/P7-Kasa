@@ -30,21 +30,32 @@
         position: relative;
         top: -0.3rem;
         z-index: -1;
-        animation: slide-in 0.2s;
+        animation: slide-in 0.2s forwards;
+    
         &.hidden {
-            animation: slide-out 0.2s;
+            animation: slide-out 0.2s forwards;
         }
     }
-}
-
-@keyframes slide-in {
-    from {
-        transform: translateY(-100%);
+    
+    @keyframes slide-in {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
-}
-
-@keyframes slide-out {
-    to {
-        transform: translateY(100%);
+    
+    @keyframes slide-out {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
     }
-}
+}    

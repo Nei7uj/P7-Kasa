@@ -3,9 +3,18 @@ import "./DescriptionPanel.scss";
 
 function DescriptionPanel(props) {
     const [isContentVisible, setIsContentVisible] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     const toggleContent = () => {
-        setIsContentVisible(!isContentVisible);
+        if (isContentVisible) {
+            setIsAnimating(true);
+            setTimeout(() => {
+                setIsAnimating(false);
+                setIsContentVisible(false);
+            }, 200);
+        } else {
+            setIsContentVisible(true);
+        }
     };
 
     return (
@@ -19,7 +28,7 @@ function DescriptionPanel(props) {
             </p>
 
             {isContentVisible && (
-                <p className="description__content">
+                <p className={`description__content ${isAnimating ? "hidden" : ""}`}>
                     {props.content}
                 </p>
             )}
