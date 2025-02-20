@@ -18,8 +18,7 @@ function ApartmentPage({apartments}) {
                     <h1>{selectedHouse.title}</h1>
                         <h2>{selectedHouse.location}</h2>
                     <div className="apartment__tags">
-                        {selectedHouse.tags.map((tag) => (<span>{tag}</span>))}
-                        
+                        {selectedHouse.tags.map((tag, index) => (<span key={index}>{tag}</span>))}                      
                     </div>
                 </div>
                 <div className="apartment__owner">
@@ -33,13 +32,13 @@ function ApartmentPage({apartments}) {
                         </div>
                     </div>
                     <div className="apartment__owner__stars">
-                        {[1, 2, 3, 4, 5,].map ((num) => (<span className={selectedHouse.rating >= num ? "on" : ""} >★</span>))}
+                        {[1, 2, 3, 4, 5].map((num) => (<span key={num} className={selectedHouse.rating >= num ? "on" : ""}>★</span>))}
                     </div>
                 </div>
             </div>
             <div className="apartment__info__area">
                 <DescriptionPanel title="Description" content={selectedHouse.description}/>
-                <DescriptionPanel title="Equipements" content={selectedHouse.equipments.map((eq) => (<li>{eq}</li>))}/>
+                <DescriptionPanel title="Equipements" content={selectedHouse.equipments.map((eq, index) => (<li key={index}>{eq}</li>))}/>
             </div>
         </div>
 
