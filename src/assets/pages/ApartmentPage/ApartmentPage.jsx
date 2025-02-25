@@ -2,13 +2,16 @@ import React from "react";
 import "./ApartmentPage.scss";
 import DescriptionPanel from '../../components/DescriptionPanel/DescriptionPanel';
 import Carrousel from '../../layout/Carrousel/Carrousel';
+import Error from '../../pages/Error/Error';
 import { useParams } from "react-router-dom";
 
 function ApartmentPage({apartments}) {
     const{id}=useParams();
     const selectedHouse = apartments.find((logement) => logement.id === id);
+    if(!selectedHouse){return <Error/>};
     const name = selectedHouse.host.name;
     const [firstName, lastName] = name.split(" ");
+
 
     return(
         <div className="apartment-page">  

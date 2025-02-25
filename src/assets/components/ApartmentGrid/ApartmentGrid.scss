@@ -4,11 +4,12 @@
     background-color: $grid-background-dark;
     min-height: 50vh;
     border-radius: 2rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 40px;
     padding: 2rem;
-    justify-content: space-between;
+    min-width: 95%;
     & > * {
         width: 100%;
         max-width: 20rem;
@@ -17,10 +18,17 @@
 
 @media screen and (width <= 768px) {
     .grid {
-                flex-direction: column;
+        flex-direction: column;
+        display: flex;
         gap: 2rem;
         background-color: white;
         padding-left: 0;
         padding-top: 0;
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
